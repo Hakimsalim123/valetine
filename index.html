@@ -71,23 +71,9 @@ noBtn.onclick = function() {
   noCount++;
   noBtn.textContent = phrases[Math.min(noCount, phrases.length - 1)];
 
-  let size = 16 + noCount * 4;
-  yesBtn.style.fontSize = size + "px";
+  let size = 16 + noCount * 8;
+yesBtn.style.transform = `scale(${1 + noCount * 0.1})`;
 };
-
-setInterval(() => {
-  const heart = document.createElement("div");
-  heart.textContent = "❤️";
-  heart.style.position = "absolute";
-  heart.style.left = Math.random() * window.innerWidth + "px";
-  heart.style.top = "-20px";
-  heart.style.fontSize = "24px";
-
-  document.body.appendChild(heart);
-
-  setTimeout(() => heart.remove(), 5000);
-}, 400);
-
 
 yesBtn.onclick = function() {
   content.innerHTML = `
