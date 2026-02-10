@@ -75,6 +75,20 @@ noBtn.onclick = function() {
   yesBtn.style.fontSize = size + "px";
 };
 
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.textContent = "❤️";
+  heart.style.position = "absolute";
+  heart.style.left = Math.random() * window.innerWidth + "px";
+  heart.style.top = "-20px";
+  heart.style.fontSize = "24px";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 5000);
+}, 400);
+
+
 yesBtn.onclick = function() {
   content.innerHTML = `
     <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif">
