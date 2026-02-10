@@ -71,8 +71,8 @@ noBtn.onclick = function() {
   noCount++;
   noBtn.textContent = phrases[Math.min(noCount, phrases.length - 1)];
 
-  let size = 16 + noCount * 8;
-yesBtn.style.transform = `scale(${1 + noCount * 0.1})`;
+  let size = 16 + noCount * 4;
+  yesBtn.style.fontSize = size + "px";
 };
 
 yesBtn.onclick = function() {
